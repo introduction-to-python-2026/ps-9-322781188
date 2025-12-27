@@ -20,14 +20,5 @@ model.fit(X_train, y_train)
 y_pred = model.predict(X_val)
 accuracy = accuracy_score(y_val, y_pred)
 
-model_filename = 'parkinsons_model.joblib'
-joblib.dump(model, model_filename)
-joblib.dump(scaler, 'scaler.joblib')
-config = {
-    "model_name": model_filename,
-    "features": ["spread1", "PPE"]
-}
 
-with open('config.yaml', 'w') as file:
-    yaml.dump(config, file)
 
