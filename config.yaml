@@ -1,4 +1,2 @@
-model_name: parkinsons_model.joblib
-features:
-  - spread1
-  - PPE
+selected_features: ["spread1", "PPE"]  
+path: "parkinsons_model.joblib"  
